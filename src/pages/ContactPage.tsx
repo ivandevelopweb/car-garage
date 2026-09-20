@@ -1,0 +1,15 @@
+import { Clock3, ExternalLink, MapPin, Phone, Star } from 'lucide-react'
+import { business } from '../content'
+import { BookingForm } from '../components/BookingForm'
+import { PageMeta } from '../components/PageMeta'
+
+export function ContactPage() {
+  return (
+    <>
+      <PageMeta title="Контакти — Автозвук, Тонировка" description="Адреса, телефон, графік і карта майстерні «Автозвук, Тонировка» у Шостці." />
+      <section className="page-intro page-intro--dark"><div className="container page-intro__inner"><div><p className="eyebrow eyebrow--accent">Контакти</p><h1>Знайти майстерню й записатися.</h1><p className="page-intro__copy">Вулиця Партизан, 4 у Шостці. Зателефонуйте, щоб уточнити задачу по автомобілю та домовитися про час.</p><a className="button button--accent" href={business.phoneHref}><Phone size={17} aria-hidden="true" />{business.phone}</a></div><div className="page-intro__side"><span><Clock3 size={17} aria-hidden="true" />{business.hours}</span><span><Star size={16} fill="currentColor" aria-hidden="true" />{business.rating} · {business.reviewCount}</span></div></div></section>
+      <section className="section contact-section"><div className="container contact-grid"><div className="contact-details"><div className="contact-detail"><span className="contact-detail__icon"><MapPin size={20} aria-hidden="true" /></span><div><span className="data-label">Адреса</span><strong>{business.address}</strong><a className="text-link" href={business.routeUrl} target="_blank" rel="noreferrer">Прокласти маршрут <ExternalLink size={15} aria-hidden="true" /></a></div></div><div className="contact-detail"><span className="contact-detail__icon"><Phone size={20} aria-hidden="true" /></span><div><span className="data-label">Телефон</span><a href={business.phoneHref}><strong>{business.phone}</strong></a><span>Основний канал для запису</span></div></div><div className="contact-detail"><span className="contact-detail__icon"><Clock3 size={20} aria-hidden="true" /></span><div><span className="data-label">Графік</span><strong>Понеділок–субота</strong><span>09:00–16:00 · неділя — вихідний</span></div></div></div><div className="map-frame"><iframe title="Карта розташування майстерні у Шостці" src={business.mapEmbed} loading="lazy" referrerPolicy="no-referrer-when-downgrade" /><div className="map-frame__footer"><span>вул. Партизан, 4</span><a href={business.mapsUrl} target="_blank" rel="noreferrer">Відкрити карту <ExternalLink size={15} aria-hidden="true" /></a></div></div></div></section>
+      <section className="section section--booking" id="zapis"><div className="container booking-section"><div className="booking-section__intro"><p className="eyebrow">Запис</p><h2>Залиште контакти — решту уточнимо телефоном.</h2><p>Форма коротка навмисно: у майстерні важливо поговорити про конкретний автомобіль.</p><a className="booking-section__phone" href={business.phoneHref}><Phone size={19} aria-hidden="true" />{business.phone}</a></div><BookingForm dark /></div></section>
+    </>
+  )
+}

@@ -1,0 +1,17 @@
+import { ArrowLeft, ArrowRight, Clock3 } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { PageMeta } from '../components/PageMeta'
+import { PageBooking } from '../components/PageBooking'
+
+export function ArticlePage() {
+  return (
+    <>
+      <PageMeta title="Як обрати тонування для авто — Автозвук, Тонировка" description="Практична стаття про те, що уточнити перед тонуванням автомобіля: стан скла, обсяг роботи та догляд." />
+      <article className="article-page">
+        <div className="container article-page__top"><Link className="back-link back-link--dark" to="/materialy"><ArrowLeft size={16} aria-hidden="true" />Усі матеріали</Link><span className="material-card__meta">Тонування · <Clock3 size={13} aria-hidden="true" /> 6 хв читання</span><h1>Як обрати тонування для авто: що запитати до початку роботи</h1><p className="article-page__lead">Тонування — це не тільки про те, наскільки темним буде скло. До запису важливо зрозуміти задачу, стан автомобіля та обсяг роботи.</p></div>
+        <div className="container article-layout"><div className="article-body"><p>Якщо ви вперше плануєте тонування, не обов’язково одразу знати назву плівки чи правильну комбінацію для всіх стекол. Хороша розмова починається з простих речей: яке авто, які стекла потрібно обробити та що саме хочеться змінити.</p><h2>1. Визначте задачу</h2><p>Комусь важливо зменшити кількість сонця в салоні, комусь — зробити задню частину авто менш прозорою, а хтось просто хоче привести скло до єдиного вигляду. Від цього залежить, про який обсяг роботи говорити.</p><div className="article-note"><strong>Підготуйте до дзвінка:</strong><ul><li>марку та модель автомобіля;</li><li>які саме стекла цікавлять;</li><li>чи є на склі стара плівка або пошкодження;</li><li>у який день зручно приїхати.</li></ul></div><h2>2. Запитайте про стан скла</h2><p>Перед роботою важливо оглянути поверхню. Подряпини, сліди старої плівки або проблемні ущільнювачі можуть вплинути на підготовку та тривалість процесу. Тому коректну вартість і склад робіт краще погоджувати після уточнення деталей, а не за абстрактним «від».</p><h2>3. Уточніть, що входить у роботу</h2><p>Запитайте, чи входить підготовка поверхні, зняття старого матеріалу, фінальна перевірка та рекомендації з догляду. Це не формальність: ви заздалегідь розумієте, за що домовляєтеся.</p><h2>4. Домовтеся про догляд після встановлення</h2><p>Після тонування варто отримати прості інструкції від майстра: коли можна активно користуватися склом і чим його краще очищати. Якщо щось залишилося незрозумілим, краще перепитати одразу.</p><div className="article-close"><p className="eyebrow">Коротко</p><h2>Вам не потрібно розбиратися в усьому самостійно.</h2><p>Назвіть авто, опишіть задачу і поставте питання. У майстерні підкажуть, з чого почати та який обсяг роботи має сенс.</p><Link className="button button--accent" to="/kontakty#zapis">Поставити питання <ArrowRight size={17} aria-hidden="true" /></Link></div></div><aside className="article-aside"><div className="article-aside__box"><span className="eyebrow">Запис у Шостці</span><strong>вул. Партизан, 4</strong><span>Пн–Сб · 09:00–16:00</span><Link className="text-link" to="/kontakty#zapis">Зателефонувати <ArrowRight size={16} aria-hidden="true" /></Link></div><Link className="article-next" to="/posluhy/tonuvannya-avto"><span>Далі</span><strong>Послуга «Тонування авто»</strong><ArrowRight size={18} aria-hidden="true" /></Link></aside></div>
+      </article>
+      <PageBooking />
+    </>
+  )
+}
