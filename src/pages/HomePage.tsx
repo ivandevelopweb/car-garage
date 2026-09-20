@@ -64,7 +64,7 @@ export function HomePage() {
 
       <section className="section section--gallery">
         <div className="container">
-          <SectionHeading title="З чим працюємо" copy="У майбутньому тут будуть ваші фото робіт. Поки що — добірка процесів і деталей для структури сайту." />
+          <SectionHeading title="З чим працюємо" />
           <div className="gallery-grid">
             <PhotoFrame className="photo-frame--wide" src={images.tinting} alt="Майстер встановлює тонувальну плівку на автомобільне скло" label="Тонування скла" />
             <PhotoFrame src={images.audio} alt="Деталь автомобільної акустики в салоні" label="Автозвук і акустика" />
